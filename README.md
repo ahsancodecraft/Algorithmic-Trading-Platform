@@ -42,41 +42,53 @@ Algorithmic-Trading-Platform/
 ├── .env                  # Environment variables (Database URL)
 ├── .gitignore            # Ignored files (venv, pycache, .env)
 └── alembic.ini           # Alembic configuration
+```
 
-⚙️ Getting Started & Installation
-1. Clone the Repository
-Bash
+### ⚙️ Getting Started & Installation
+
+### 1. Clone the Repository
+```Bash
 git clone [https://github.com/ahsancodecraft/Algorithmic-Trading-Platform.git](https://github.com/ahsancodecraft/Algorithmic-Trading-Platform.git)
 cd Algorithmic-Trading-Platform
-2. Create and Activate Virtual Environment
-Bash
+```
+### 2. Create and Activate Virtual Environment
+```Bash
 python -m venv venv
+```
 # On Windows:
+```Bash
 venv\Scripts\activate
-3. Install Dependencies
-Python
-pip install fastapi uvicorn sqlalchemy psycopg2-binary pydantic alembic pytest httpx python-dotenv
-4. Configure Environment Variables (.env)
-Create a .env file in the root directory and add your PostgreSQL connection string:
+```
+### 3. Install Dependencies
+```Bash
+Python -m pip install fastapi uvicorn sqlalchemy psycopg2-binary pydantic alembic pytest httpx python-dotenv
+```
+### 4. Configure Environment Variables (.env)
+* Create a *.env* file in the root directory and add your PostgreSQL connection string:
 
-Code snippet
+### Code snippet
+```Bash
 DATABASE_URL=postgresql+psycopg2://postgres:your_password@127.0.0.1:5433/Algorithmic_Trading_Platform_db
-5. Run Database Migrations
-Bash
+```
+### 5. Run Database Migrations
+```Bash
 alembic upgrade head
-6. Run the FastAPI Server
-Bash
+```
+### 6. Run the FastAPI Server
+```Bash
 python -m uvicorn app.main:app --reload --port 8080
-Access Interactive Swagger Documentation at: http://127.0.0.1:8080/docs
+```
+* Access Interactive Swagger Documentation at: http://127.0.0.1:8080/docs
 
-🧪 Running Automated Tests
-Execute the comprehensive test suite using pytest:
+* 🧪 Running Automated Tests
 
-Bash
+### Execute the comprehensive test suite using pytest:
+```Bash
 python -m pytest -v
-🛡️ Institutional Compliance & Safety
-Exact Financial Math: Utilizes Python's Decimal and SQL NUMERIC types to completely prevent compounding floating-point rounding errors in PnL calculations.
+```
+### 🛡️ Institutional Compliance & Safety
+* Exact Financial Math: Utilizes Python's Decimal and SQL NUMERIC types to completely prevent compounding floating-point rounding errors in PnL calculations.
 
-ACID Transactions: Ensures multi-step trade execution logging and state consistency.
+* ACID Transactions: Ensures multi-step trade execution logging and state consistency.
 
-Developed as part of Titan Quant Research Lab Quantitative Backend Masterclass.
+* Developed as part of Titan Quant Research Lab Quantitative Backend Masterclass.
