@@ -6,25 +6,24 @@ An institutional-grade engineering project blueprint covering relational databas
 
 ## 🛠️ Technology Stack
 
-| Layer | Suggested Technology | Purpose |
+| Layer | Suggested Technology & Logo | Purpose |
 | :--- | :--- | :--- |
-| **Language** | Python 3.12+ | Application logic, OOP domain models, and quantitative math |
-| **API Framework** | FastAPI | HTTP routes, request/response validation, interactive Swagger docs |
-| **Validation** | Pydantic | Validate API payloads and configuration schemas |
-| **Database** | PostgreSQL | Durable relational storage for high-frequency logs and strategies |
-| **ORM / Migrations** | SQLAlchemy 2.x / Alembic | Map Python classes to relational tables; version-control schema changes safely |
-| **Testing** | pytest | Unit, integration, and aggregation accuracy tests |
-| **Environment** | venv + .env + python-dotenv | Isolate dependencies and secure database connection strings |
-
+| **Language** | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white) **3.12+** | Application logic, OOP domain models, and quantitative math |
+| **API Framework** | ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=flat&logo=fastapi&logoColor=white) | HTTP routes, request/response validation, interactive Swagger docs |
+| **Validation** | ![Pydantic](https://img.shields.io/badge/Pydantic-E92063?style=flat&logo=pydantic&logoColor=white) | Validate API payloads and configuration schemas |
+| **Database** | ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white) | Durable relational storage for high-frequency logs and strategies |
+| **ORM / Migrations** | ![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-D71F00?style=flat&logo=sqlalchemy&logoColor=white) / ![Alembic](https://img.shields.io/badge/Alembic-3A7BA6?style=flat&logo=python&logoColor=white) | Map Python classes to relational tables; version-control schema changes safely |
+| **Testing** | ![pytest](https://img.shields.io/badge/pytest-0A9EDC?style=flat&logo=pytest&logoColor=white) | Unit, integration, and aggregation accuracy tests |
+| **Environment** | ![Dotenv](https://img.shields.io/badge/Dotenv-ECD53F?style=flat&logo=dotenv&logoColor=black) | Isolate dependencies and secure database connection strings |
 ---
 
 ## 📊 Core Features & Functional Requirements
 
-* **Strategy Registry:** Create, edit, activate, or deactivate trading strategies (e.g., EMA Crossover, MACD, cBots, Pine Scripts).
-* **Backtest Management:** Store historical simulation results linked directly to strategy definitions.
-* **Execution Logging:** Capture every individual buy/sell trade ticket securely with exact `Decimal` precision.
-* **Performance Analytics & Grouping:** Expose aggregated metrics (`SUM`, `AVG`, `COUNT`, `GROUP BY`) for single strategies and multi-strategy summary leaderboards.
-* **Server Restart Resilience:** Durable PostgreSQL relational storage ensuring session history survives server restarts.
+* **🤖 Strategy Registry:** Create, edit, activate, or deactivate trading strategies (e.g., EMA Crossover, MACD, cBots, Pine Scripts).
+* **📈 Backtest Management:** Store historical simulation results linked directly to strategy definitions.
+* **🧾 Execution Logging:** Capture every individual buy/sell trade ticket securely with exact `Decimal` precision.
+* **🧮 Performance Analytics & Grouping:** Expose aggregated metrics (`SUM`, `AVG`, `COUNT`, `GROUP BY`) for single strategies and multi-strategy summary leaderboards.
+* **💾 Server Restart Resilience:** Durable PostgreSQL relational storage ensuring session history survives server restarts.
 
 ---
 
@@ -86,9 +85,8 @@ python -m uvicorn app.main:app --reload --port 8080
 ```Bash
 python -m pytest -v
 ```
-### 🛡️ Institutional Compliance & Safety
-* Exact Financial Math: Utilizes Python's Decimal and SQL NUMERIC types to completely prevent compounding floating-point rounding errors in PnL calculations.
+## 🛡️ Institutional Compliance & Safety
 
-* ACID Transactions: Ensures multi-step trade execution logging and state consistency.
-
-* Developed as part of Titan Quant Research Lab Quantitative Backend Masterclass.
+* **🧮 Exact Financial Math:** Utilizes Python's `Decimal` and SQL `NUMERIC` types to completely prevent compounding floating-point rounding errors in PnL calculations.
+* **🔒 ACID Transactions:** Ensures multi-step trade execution logging and state consistency.
+* **🔬 Developed as part of Titan Quant Research Lab | Quantitative Backend Masterclass.**
